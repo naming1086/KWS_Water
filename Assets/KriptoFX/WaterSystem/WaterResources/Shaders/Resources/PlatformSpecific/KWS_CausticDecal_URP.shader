@@ -14,7 +14,7 @@
 
 			#pragma vertex vert
 			#pragma fragment frag
-
+			#pragma enable_d3d11_debug_symbols
 			#pragma multi_compile _ USE_DISPERSION
 			#pragma multi_compile _ USE_LOD1 USE_LOD2 USE_LOD3
 			#pragma multi_compile _ KW_DYNAMIC_WAVES

@@ -1,7 +1,7 @@
 ﻿Shader "Hidden/KriptoFX/KWS/Caustic_Pass"
 {
 	HLSLINCLUDE
-
+	#pragma enable_d3d11_debug_symbols
 	//#include "UnityCG.cginc"
 	#include "../KWS_WaterVariables.cginc"
 	#include "../KWS_WaterPassHelpers.cginc"

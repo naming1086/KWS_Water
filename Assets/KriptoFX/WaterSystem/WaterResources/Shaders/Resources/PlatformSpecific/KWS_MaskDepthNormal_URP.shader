@@ -23,7 +23,7 @@ Shader "Hidden/KriptoFX/KWS/MaskDepthNormal_URP"
 				#include "../Common/KWS_WaterVertPass.cginc"
 				#include "KWS_WaterFragPass.cginc"
 				#include "../Common/KWS_Tessellation.cginc"
-
+				#pragma enable_d3d11_debug_symbols
 				#pragma multi_compile _ KW_FLOW_MAP KW_FLOW_MAP_FLUIDS
 				#pragma multi_compile _ KW_DYNAMIC_WAVES
 				#pragma multi_compile _ USE_MULTIPLE_SIMULATIONS

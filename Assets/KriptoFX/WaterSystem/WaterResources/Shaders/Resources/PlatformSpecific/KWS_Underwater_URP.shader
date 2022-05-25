@@ -1,7 +1,7 @@
 Shader "Hidden/KriptoFX/KWS/Underwater_URP"
 {
 	HLSLINCLUDE
-
+	#pragma enable_d3d11_debug_symbols
 	#include "../Common/KWS_WaterVariables.cginc"
 	#include "../Common/KWS_WaterPassHelpers.cginc"
 	#include "../Common/KWS_CommonHelpers.cginc"

@@ -44,7 +44,7 @@ Shader "KriptoFX/KWS/Water" {
 				#include "KWS_WaterFragPass.cginc"
 				#include "../Common/KWS_Tessellation.cginc"
 
-
+				#pragma enable_d3d11_debug_symbols
 				#pragma shader_feature  KW_FLOW_MAP_EDIT_MODE
 				#pragma multi_compile _ KW_FLOW_MAP KW_FLOW_MAP_FLUIDS
 				#pragma multi_compile _ KW_DYNAMIC_WAVES

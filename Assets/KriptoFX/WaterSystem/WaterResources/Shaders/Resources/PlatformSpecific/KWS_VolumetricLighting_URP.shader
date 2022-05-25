@@ -12,8 +12,8 @@
 
         Pass
         {
-                HLSLPROGRAM
-
+            HLSLPROGRAM
+            #pragma enable_d3d11_debug_symbols
             #pragma prefer_hlslcc gles
             #pragma exclude_renderers d3d11_9x
 
