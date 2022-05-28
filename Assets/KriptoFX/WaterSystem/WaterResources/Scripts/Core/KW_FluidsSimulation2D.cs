@@ -277,13 +277,12 @@ namespace KWS
             fluidsMaterial.SetFloat("_AreaSize", areaSize);
             fluidsMaterial.SetFloat("_FoamTexelOffset", foamTexelOffset);
 
-
             var source = (frameNumber % 2 == 0) ? data1 : data2;
             var target = (frameNumber % 2 == 0) ? data2 : data1;
             fluidsMaterial.SetVector("_CurrentPositionOffset", offset / areaSize);
             fluidsMaterial.SetVector("_CurrentFluidMapWorldPos", worldPos);
             Graphics.SetRenderTarget(target.MRT, target.DataRT.rt.depthBuffer);
-            Graphics.Blit(source.DataRT.rt, fluidsMaterial, 0);
+            Graphics.Blit(source.DataRT.rt, fluidsMaterial, 0); // 设置source.DataRT.rt作为fluidsMaterial的maintex, 调用第0个pass, 并且把渲染结果画到上一行代码指定的RT上去
             return target;
         }
     }
