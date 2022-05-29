@@ -112,6 +112,7 @@
                newForce.xy += (flowmap) * 0.03 * _FlowSpeed;  // newforce以flowmap中信息起代替重力的加速作用
 
                data.xy += _FlowSpeed * 1.5 * dt * (viscForce.xy - K / dt * densDif + newForce); //update velocity. 在上面计算的基础速度之上增加受力带来的新速度. 粘性力起阻滞作用, newforce起加速作用
+                // 可以注意到流速方向和flowmap的正方向一致
                data.xy = max(0, abs(data.xy) - 1e-4) * sign(data.xy); //linear velocity decay
 
                data.w = (tr.y - tl.y - (tu.x - td.x)); // data.w为涡的速度幅值, X向速度在Y向的梯度(tr.y - tl.y)和Y向速度在X向的梯度(tu.x - td.x)越大时涡越大.
